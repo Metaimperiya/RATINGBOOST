@@ -136,7 +136,6 @@
             width: 100%;
         }
 
-        /* ===== БЛОК С ОПИСАНИЕМ ===== */
         .block-section {
             margin: 28px 0 14px;
             animation: fadeIn 0.8s ease;
@@ -149,7 +148,6 @@
         }
         .block-section h2 span { color: #fff; }
 
-        /* SEO-описание над блоком */
         .seo-description {
             background: rgba(255,215,0,0.05);
             border-left: 4px solid #ffd700;
@@ -165,7 +163,6 @@
             font-weight: 700;
         }
 
-        /* Бегущая строка внутри блока */
         .block-marquee {
             background: rgba(255,215,0,0.08);
             padding: 8px 0;
@@ -447,6 +444,146 @@
         .share-grid .ok { border-left: 3px solid #ed812b; }
         .share-grid .tw { border-left: 3px solid #1da1f2; }
 
+        /* ===== ПРЕВЬЮ-БЛОК В ПОДВАЛЕ ===== */
+        .preview-block {
+            background: #0a0a0a;
+            border-radius: 20px;
+            padding: 40px 40px 30px;
+            margin: 30px 0 20px;
+            border: 2px solid rgba(255, 215, 0, 0.15);
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        .preview-block::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.06), transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+        .preview-block::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.04), transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            pointer-events: none;
+        }
+
+        .preview-block .preview-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .preview-block .preview-left {
+            flex: 1;
+            min-width: 250px;
+        }
+        .preview-block .preview-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.12);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffd700;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        .preview-block .preview-logo {
+            font-size: 32px;
+            font-weight: 900;
+            color: #ffd700;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .preview-block .preview-logo span { color: #fff; }
+        .preview-block .preview-title {
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #fff;
+        }
+        .preview-block .preview-title .gold {
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .preview-block .preview-sub {
+            font-size: 17px;
+            color: #9ca3af;
+            margin: 6px 0 14px;
+        }
+        .preview-block .preview-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #f0a500);
+            color: #0a0a0a;
+            padding: 12px 36px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .preview-block .preview-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
+        }
+        .preview-block .preview-right {
+            font-size: 80px;
+            line-height: 1;
+            opacity: 0.9;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.1);
+            animation: floatIcon 4s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0) rotate(-3deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+        }
+
+        .preview-block .preview-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 215, 0, 0.08);
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .preview-block .preview-footer span {
+            font-size: 13px;
+            color: #555;
+            font-weight: 500;
+        }
+        .preview-block .preview-footer .stars {
+            color: #ffd700;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
         .footer {
             border-top: 1px solid #2a2a2a;
             padding: 20px 0 14px;
@@ -469,9 +606,47 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        @media (min-width: 600px) {
-            .grid-4 { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 40px; }
+        @media (max-width: 768px) {
+            .preview-block .preview-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .preview-block .preview-title {
+                font-size: 28px;
+            }
+            .preview-block .preview-right {
+                font-size: 60px;
+                align-self: center;
+            }
+            .preview-block {
+                padding: 25px 20px;
+            }
+            .preview-block .preview-logo {
+                font-size: 24px;
+            }
+            .preview-block .preview-sub {
+                font-size: 15px;
+            }
+            .preview-block .preview-btn {
+                font-size: 14px;
+                padding: 10px 28px;
+            }
+        }
+        @media (max-width: 480px) {
+            .preview-block .preview-title {
+                font-size: 22px;
+            }
+            .preview-block .preview-right {
+                font-size: 44px;
+            }
+            .preview-block .preview-logo {
+                font-size: 20px;
+            }
+            .preview-block .preview-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
         }
         @media (min-width: 900px) {
             .grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -518,23 +693,18 @@
         <!-- ===== БЛОК 1: О НАС ===== -->
         <section class="block-section" id="block1">
             <h2>Почему <span>RatingBoost</span></h2>
-
-            <!-- SEO-описание -->
             <div class="seo-description">
                 <strong>Реальные отзывы Google</strong> — это фундамент вашего бизнеса в интернете. 
                 <strong>Рейтинг буст</strong> и <strong>органические отзывы</strong> помогают привлекать клиентов 
                 и укреплять <strong>репутацию</strong>. Узнайте, как <strong>Google Reviews</strong> влияют на 
                 <strong>локальное SEO</strong> и видимость в <strong>Google Maps</strong>.
             </div>
-
-            <!-- Бегущая строка внутри блока -->
             <div class="block-marquee">
                 <div class="track">
                     <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ДЛЯ БИЗНЕСА 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИЧЕСКИЙ РОСТ 🔥 ЛОКАЛЬНОЕ SEO 🔥 GOOGLE MAPS 🔥</span>
                     <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ДЛЯ БИЗНЕСА 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИЧЕСКИЙ РОСТ 🔥 ЛОКАЛЬНОЕ SEO 🔥 GOOGLE MAPS 🔥</span>
                 </div>
             </div>
-
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><h3>👥 Реальные люди</h3><p>Живые клиенты ставят честные отзывы.</p></div>
@@ -548,21 +718,18 @@
         <!-- ===== БЛОК 2: КАК РАБОТАЕТ ===== -->
         <section class="block-section" id="block2">
             <h2>Как это <span>работает</span></h2>
-
             <div class="seo-description">
                 <strong>Рейтинг буст</strong> начинается с правильной стратегии. Мы помогаем собирать 
                 <strong>реальные отзывы Google</strong> через простые инструменты: ссылки, QR-коды и шаблоны. 
                 Это улучшает <strong>локальное SEO</strong>, повышает доверие и выводит бизнес в 
                 <strong>Google Maps</strong> топ.
             </div>
-
             <div class="block-marquee">
                 <div class="track">
                     <span>⚡ КАК РАБОТАЕТ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS СТРАТЕГИЯ ⚡ ОРГАНИЧЕСКИЕ ОТЗЫВЫ ⚡ ЛОКАЛЬНОЕ SEO ⚡</span>
                     <span>⚡ КАК РАБОТАЕТ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS СТРАТЕГИЯ ⚡ ОРГАНИЧЕСКИЕ ОТЗЫВЫ ⚡ ЛОКАЛЬНОЕ SEO ⚡</span>
                 </div>
             </div>
-
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><div class="number">1</div><h3>📝 Регистрация</h3><p>Заполни форму и получи доступ.</p></div>
@@ -576,21 +743,18 @@
         <!-- ===== БЛОК 3: ЦЕНЫ ===== -->
         <section class="block-section" id="block3">
             <h2>Цены — <span>прозрачные</span></h2>
-
             <div class="seo-description">
                 Выберите тариф для <strong>рейтинг буст</strong> вашего бизнеса. 
                 <strong>Реальные отзывы Google</strong> — это доступный инструмент для роста продаж. 
                 Мы предлагаем гибкие цены для любого бюджета, от старта до VIP-пакета с полным 
                 <strong>SEO для бизнеса</strong>.
             </div>
-
             <div class="block-marquee">
                 <div class="track">
                     <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 СТОИМОСТЬ GOOGLE REVIEWS 💰 ОРГАНИЧЕСКИЕ ОТЗЫВЫ НЕДОРОГО 💰</span>
                     <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 СТОИМОСТЬ GOOGLE REVIEWS 💰 ОРГАНИЧЕСКИЕ ОТЗЫВЫ НЕДОРОГО 💰</span>
                 </div>
             </div>
-
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><h3>🚀 Старт</h3><div class="cost">$19</div><ul><li>📌 10 отзывов/мес</li><li>🔧 Инструменты</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
@@ -604,20 +768,17 @@
         <!-- ===== БЛОК 4: ОТЗЫВЫ ===== -->
         <section class="block-section" id="block4">
             <h2>Реальные <span>отзывы</span></h2>
-
             <div class="seo-description">
                 <strong>Реальные отзывы Google</strong> от наших клиентов — лучшее доказательство эффективности. 
                 <strong>Рейтинг буст</strong> помог многим бизнесам выйти в топ <strong>Google Maps</strong> и увеличить 
                 продажи. Читайте истории успеха и вдохновляйтесь!
             </div>
-
             <div class="block-marquee">
                 <div class="track">
                     <span>⭐ РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ОТ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ В ДЕЙСТВИИ ⭐ ГОРЯЧИЕ ОТЗЫВЫ ⭐</span>
                     <span>⭐ РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ОТ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ В ДЕЙСТВИИ ⭐ ГОРЯЧИЕ ОТЗЫВЫ ⭐</span>
                 </div>
             </div>
-
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«+30% продаж за месяц!»</p><div class="author">— Михаил, кофейня</div></div>
@@ -631,20 +792,17 @@
         <!-- ===== БЛОК 5: ЖИВЫЕ ОТЗЫВЫ ===== -->
         <section class="block-section" id="block5">
             <h2>🔥 Живые <span>отзывы</span></h2>
-
             <div class="seo-description">
                 <strong>Органические отзывы</strong> — это голос ваших клиентов. Мы помогаем собирать 
                 <strong>реальные отзывы Google</strong>, которые работают на ваш <strong>рейтинг буст</strong> 
                 и <strong>локальное SEO</strong>. Каждый отзыв — это шаг к лидерству в <strong>Google Maps</strong>.
             </div>
-
             <div class="block-marquee">
                 <div class="track">
                     <span>🔥 ЖИВЫЕ ОТЗЫВЫ ОТ РЕАЛЬНЫХ КЛИЕНТОВ 🔥 РЕЙТИНГ БУСТ С GOOGLE REVIEWS 🔥 ОРГАНИКА 🔥</span>
                     <span>🔥 ЖИВЫЕ ОТЗЫВЫ ОТ РЕАЛЬНЫХ КЛИЕНТОВ 🔥 РЕЙТИНГ БУСТ С GOOGLE REVIEWS 🔥 ОРГАНИКА 🔥</span>
                 </div>
             </div>
-
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><p>«RatingBoost поднял рейтинг с 3.2 до 4.8»</p><div class="author">— Алексей, ресторан</div></div>
@@ -655,7 +813,7 @@
             </div>
         </section>
 
-        <!-- ===== БОЛЬШАЯ СТАТЬЯ С SEO ===== -->
+        <!-- ===== СТАТЬЯ ===== -->
         <section class="article-section">
             <h2>🚀 Как получить реальные отзывы Google в 2026</h2>
             <p><span class="highlight">Google Reviews</span> — ключевой фактор локального SEO. Чем больше качественных отзывов, тем выше бизнес в выдаче <span class="highlight">Google Maps</span>.</p>
@@ -671,7 +829,7 @@
             <p>Клиенты сами решают, ставить ли отзыв. Мы создаём условия, чтобы <span class="highlight">Google Reviews</span> появлялись естественно и работали на ваш <span class="highlight">рейтинг буст</span>.</p>
         </section>
 
-        <!-- ===== КНОПКИ ПОДЕЛИТЬСЯ ===== -->
+        <!-- ===== ШАРИНГ ===== -->
         <section class="share-section" id="share">
             <h3>📱 Поделиться в соцсетях</h3>
             <div class="share-grid">
@@ -702,6 +860,30 @@
                 </form>
             </div>
         </section>
+
+        <!-- ===== ПРЕВЬЮ-БЛОК В ПОДВАЛЕ ===== -->
+        <div class="preview-block">
+            <div class="preview-inner">
+                <div class="preview-left">
+                    <div class="preview-badge">🏆 #1 Реальные отзывы Google</div>
+                    <div class="preview-logo">🚀 Rating<span>Boost</span></div>
+                    <div class="preview-title">
+                        Реальные отзывы <br /><span class="gold">Google для всех</span>
+                    </div>
+                    <div class="preview-sub">
+                        Без ботов · Органика · Рост рейтинга
+                    </div>
+                    <a href="#contact" class="preview-btn">🚀 Начать сейчас</a>
+                </div>
+                <div class="preview-right">
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </div>
+            <div class="preview-footer">
+                <span>📍 RatingBoost · Реальные отзывы Google</span>
+                <span class="stars">⭐ 4.9 ★ 847+ бизнесов</span>
+            </div>
+        </div>
 
         <!-- ===== ПОДВАЛ ===== -->
         <div class="footer">
