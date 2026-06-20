@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+
+    <!-- ===== TITLE ===== -->
     <title>RatingBoost | Реальные отзывы Google для бизнеса, рейтинг буст и SEO</title>
+
+    <!-- ===== МЕТА ДЛЯ SEO ===== -->
     <meta name="description" content="Реальные отзывы Google для бизнеса. Органический рейтинг буст, SEO оптимизация, рост продаж. Без ботов и нарушений." />
-    <meta name="keywords" content="реальные отзывы Google, рейтинг буст, органические отзывы, SEO для бизнеса, локальное SEO, Google Maps, RatingBoost, накрутка отзывов, репутация" />
+    <meta name="keywords" content="реальные отзывы Google, рейтинг буст, органические отзывы, SEO для бизнеса, локальное SEO, Google Maps, RatingBoost" />
+
+    <!-- ===== ПОДТВЕРЖДЕНИЕ GOOGLE SEARCH CONSOLE ===== -->
+    <meta name="google-site-verification" content="RS-c4zCmiwrQUy9uKeLJOVDVCvz3yt8pJPEGKbIgMnY" />
+
+    <!-- ===== OG-ТЕГИ ДЛЯ ПРЕВЬЮ В СОЦСЕТЯХ ===== -->
+    <meta property="og:title" content="RatingBoost | Реальные отзывы Google для бизнеса" />
+    <meta property="og:description" content="Реальный рейтинг буст без ботов. Органические отзывы Google для роста продаж." />
+    <meta property="og:image" content="https://tvoi-nick.github.io/ratingboost/ratingboost-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://tvoi-nick.github.io/ratingboost/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RatingBoost" />
+
+    <!-- ===== TWITTER ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RatingBoost | Реальные отзывы Google" />
+    <meta name="twitter:description" content="Реальный рейтинг буст без ботов. Органические отзывы Google." />
+    <meta name="twitter:image" content="https://tvoi-nick.github.io/ratingboost/ratingboost-preview.png" />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
     <style>
+        /* ... твой CSS, который уже был ... */
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -17,7 +45,6 @@
             padding: 0 8px 20px;
             font-size: 18px;
         }
-
         .marquee-wrap {
             background: linear-gradient(90deg, #ffd700, #ffaa00, #ffd700);
             padding: 10px 0;
@@ -44,7 +71,6 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-
         header {
             display: flex;
             justify-content: space-between;
@@ -75,7 +101,6 @@
             transition: 0.3s;
         }
         nav a:hover { color: #ffd700; }
-
         .hero {
             padding: 30px 0 25px;
             text-align: center;
@@ -135,7 +160,6 @@
             margin: 0 auto;
             width: 100%;
         }
-
         .block-section {
             margin: 28px 0 14px;
             animation: fadeIn 0.8s ease;
@@ -147,7 +171,6 @@
             margin-bottom: 6px;
         }
         .block-section h2 span { color: #fff; }
-
         .seo-description {
             background: rgba(255,215,0,0.05);
             border-left: 4px solid #ffd700;
@@ -162,7 +185,6 @@
             color: #ffd700;
             font-weight: 700;
         }
-
         .block-marquee {
             background: rgba(255,215,0,0.08);
             padding: 8px 0;
@@ -186,14 +208,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .block-wrap {
             background: #121212;
             border-radius: 14px;
             padding: 16px 14px;
             border: 1px solid #2a2a2a;
         }
-
         .grid-4 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -213,7 +233,6 @@
         .grid-item:nth-child(2) { animation-delay: 0.2s; }
         .grid-item:nth-child(3) { animation-delay: 0.3s; }
         .grid-item:nth-child(4) { animation-delay: 0.4s; }
-
         .grid-item:hover {
             background: #282828;
             transform: translateY(-4px) scale(1.02);
@@ -311,7 +330,6 @@
             margin-top: 4px;
         }
         .grid-item .btn-small-telegram:hover { background: #00aaff; transform: scale(1.04); }
-
         .article-section {
             background: #1a1a1a;
             border-radius: 12px;
@@ -349,7 +367,6 @@
             color: #ffd700;
             font-weight: 700;
         }
-
         .form-section {
             background: #1a1a1a;
             border-radius: 12px;
@@ -397,7 +414,6 @@
             font-size: 19px;
             font-weight: 700;
         }
-
         .share-section {
             background: #1a1a1a;
             border-radius: 12px;
@@ -444,7 +460,7 @@
         .share-grid .ok { border-left: 3px solid #ed812b; }
         .share-grid .tw { border-left: 3px solid #1da1f2; }
 
-        /* ===== ПРЕВЬЮ-БЛОК В ПОДВАЛЕ ===== */
+        /* ===== ПРЕВЬЮ-БЛОК ===== */
         .preview-block {
             background: #0a0a0a;
             border-radius: 20px;
@@ -479,7 +495,6 @@
             filter: blur(60px);
             pointer-events: none;
         }
-
         .preview-block .preview-inner {
             display: flex;
             align-items: center;
@@ -560,7 +575,6 @@
             0%, 100% { transform: translateY(0) rotate(-3deg); }
             50% { transform: translateY(-10px) rotate(3deg); }
         }
-
         .preview-block .preview-footer {
             display: flex;
             justify-content: space-between;
@@ -657,7 +671,7 @@
 </head>
 <body>
 
-    <!-- ===== БЕГУЩАЯ СТРОКА ГЛАВНАЯ ===== -->
+    <!-- ===== БЕГУЩАЯ СТРОКА ===== -->
     <div class="marquee-wrap">
         <div class="track">
             <span>🚀 REAL GOOGLE REVIEWS 🎯 ORGANIC ⚡ NO BOTS 🔥 SEO 💰 RATINGBOOST</span>
@@ -690,44 +704,40 @@
             </div>
         </section>
 
-        <!-- ===== БЛОК 1: О НАС ===== -->
+        <!-- ===== БЛОК 1 ===== -->
         <section class="block-section" id="block1">
             <h2>Почему <span>RatingBoost</span></h2>
             <div class="seo-description">
-                <strong>Реальные отзывы Google</strong> — это фундамент вашего бизнеса в интернете. 
-                <strong>Рейтинг буст</strong> и <strong>органические отзывы</strong> помогают привлекать клиентов 
-                и укреплять <strong>репутацию</strong>. Узнайте, как <strong>Google Reviews</strong> влияют на 
-                <strong>локальное SEO</strong> и видимость в <strong>Google Maps</strong>.
+                <strong>Реальные отзывы Google</strong> — фундамент бизнеса в интернете.
+                <strong>Рейтинг буст</strong> и <strong>органические отзывы</strong> помогают привлекать клиентов.
             </div>
             <div class="block-marquee">
                 <div class="track">
-                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ДЛЯ БИЗНЕСА 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИЧЕСКИЙ РОСТ 🔥 ЛОКАЛЬНОЕ SEO 🔥 GOOGLE MAPS 🔥</span>
-                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ДЛЯ БИЗНЕСА 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИЧЕСКИЙ РОСТ 🔥 ЛОКАЛЬНОЕ SEO 🔥 GOOGLE MAPS 🔥</span>
+                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИКА 🔥</span>
+                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИКА 🔥</span>
                 </div>
             </div>
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><h3>👥 Реальные люди</h3><p>Живые клиенты ставят честные отзывы.</p></div>
                     <div class="grid-item"><h3>🌍 Для всех</h3><p>Равные возможности для любого бизнеса.</p></div>
-                    <div class="grid-item"><h3>🌿 Органика</h3><p>Без ботов, без нарушений правил.</p></div>
+                    <div class="grid-item"><h3>🌿 Органика</h3><p>Без ботов и нарушений.</p></div>
                     <div class="grid-item"><h3>📈 Рост SEO</h3><p>Выше в выдаче Google и картах.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== БЛОК 2: КАК РАБОТАЕТ ===== -->
+        <!-- ===== БЛОК 2 ===== -->
         <section class="block-section" id="block2">
             <h2>Как это <span>работает</span></h2>
             <div class="seo-description">
-                <strong>Рейтинг буст</strong> начинается с правильной стратегии. Мы помогаем собирать 
-                <strong>реальные отзывы Google</strong> через простые инструменты: ссылки, QR-коды и шаблоны. 
-                Это улучшает <strong>локальное SEO</strong>, повышает доверие и выводит бизнес в 
-                <strong>Google Maps</strong> топ.
+                <strong>Рейтинг буст</strong> начинается с правильной стратегии. Собирайте
+                <strong>реальные отзывы Google</strong> через ссылки, QR-коды и шаблоны.
             </div>
             <div class="block-marquee">
                 <div class="track">
-                    <span>⚡ КАК РАБОТАЕТ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS СТРАТЕГИЯ ⚡ ОРГАНИЧЕСКИЕ ОТЗЫВЫ ⚡ ЛОКАЛЬНОЕ SEO ⚡</span>
-                    <span>⚡ КАК РАБОТАЕТ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS СТРАТЕГИЯ ⚡ ОРГАНИЧЕСКИЕ ОТЗЫВЫ ⚡ ЛОКАЛЬНОЕ SEO ⚡</span>
+                    <span>⚡ СТРАТЕГИЯ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS ⚡</span>
+                    <span>⚡ СТРАТЕГИЯ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS ⚡</span>
                 </div>
             </div>
             <div class="block-wrap">
@@ -740,43 +750,39 @@
             </div>
         </section>
 
-        <!-- ===== БЛОК 3: ЦЕНЫ ===== -->
+        <!-- ===== БЛОК 3 ===== -->
         <section class="block-section" id="block3">
             <h2>Цены — <span>прозрачные</span></h2>
             <div class="seo-description">
-                Выберите тариф для <strong>рейтинг буст</strong> вашего бизнеса. 
-                <strong>Реальные отзывы Google</strong> — это доступный инструмент для роста продаж. 
-                Мы предлагаем гибкие цены для любого бюджета, от старта до VIP-пакета с полным 
-                <strong>SEO для бизнеса</strong>.
+                Тарифы для <strong>рейтинг буст</strong>. <strong>Реальные отзывы Google</strong> — доступный инструмент роста.
             </div>
             <div class="block-marquee">
                 <div class="track">
-                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 СТОИМОСТЬ GOOGLE REVIEWS 💰 ОРГАНИЧЕСКИЕ ОТЗЫВЫ НЕДОРОГО 💰</span>
-                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 СТОИМОСТЬ GOOGLE REVIEWS 💰 ОРГАНИЧЕСКИЕ ОТЗЫВЫ НЕДОРОГО 💰</span>
+                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 GOOGLE REVIEWS 💰</span>
+                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 GOOGLE REVIEWS 💰</span>
                 </div>
             </div>
             <div class="block-wrap">
                 <div class="grid-4">
-                    <div class="grid-item"><h3>🚀 Старт</h3><div class="cost">$19</div><ul><li>📌 10 отзывов/мес</li><li>🔧 Инструменты</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
-                    <div class="grid-item" style="border-color:#ffd700;"><h3>💼 Бизнес</h3><div class="cost">$49</div><ul><li>📌 50 отзывов/мес</li><li>👨‍💼 Менеджер</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
-                    <div class="grid-item"><h3>🏢 Корпоративный</h3><div class="cost">$99</div><ul><li>📌 Безлимит</li><li>📊 Аналитика</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
-                    <div class="grid-item"><h3>👑 VIP</h3><div class="cost">$199</div><ul><li>📌 Всё включено</li><li>⚡ Приоритет</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item"><h3>🚀 Старт</h3><div class="cost">$19</div><ul><li>📌 10 отзывов/мес</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item" style="border-color:#ffd700;"><h3>💼 Бизнес</h3><div class="cost">$49</div><ul><li>📌 50 отзывов/мес</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item"><h3>🏢 Корпоративный</h3><div class="cost">$99</div><ul><li>📌 Безлимит</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item"><h3>👑 VIP</h3><div class="cost">$199</div><ul><li>📌 Всё включено</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== БЛОК 4: ОТЗЫВЫ ===== -->
+        <!-- ===== БЛОК 4 ===== -->
         <section class="block-section" id="block4">
             <h2>Реальные <span>отзывы</span></h2>
             <div class="seo-description">
-                <strong>Реальные отзывы Google</strong> от наших клиентов — лучшее доказательство эффективности. 
-                <strong>Рейтинг буст</strong> помог многим бизнесам выйти в топ <strong>Google Maps</strong> и увеличить 
-                продажи. Читайте истории успеха и вдохновляйтесь!
+                <strong>Реальные отзывы Google</strong> от клиентов — доказательство эффективности.
+                <strong>Рейтинг буст</strong> вывел бизнесы в топ <strong>Google Maps</strong>.
             </div>
             <div class="block-marquee">
                 <div class="track">
-                    <span>⭐ РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ОТ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ В ДЕЙСТВИИ ⭐ ГОРЯЧИЕ ОТЗЫВЫ ⭐</span>
-                    <span>⭐ РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ОТ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ В ДЕЙСТВИИ ⭐ ГОРЯЧИЕ ОТЗЫВЫ ⭐</span>
+                    <span>⭐ ОТЗЫВЫ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ ⭐</span>
+                    <span>⭐ ОТЗЫВЫ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ ⭐</span>
                 </div>
             </div>
             <div class="block-wrap">
@@ -789,25 +795,23 @@
             </div>
         </section>
 
-        <!-- ===== БЛОК 5: ЖИВЫЕ ОТЗЫВЫ ===== -->
+        <!-- ===== БЛОК 5 ===== -->
         <section class="block-section" id="block5">
             <h2>🔥 Живые <span>отзывы</span></h2>
             <div class="seo-description">
-                <strong>Органические отзывы</strong> — это голос ваших клиентов. Мы помогаем собирать 
-                <strong>реальные отзывы Google</strong>, которые работают на ваш <strong>рейтинг буст</strong> 
-                и <strong>локальное SEO</strong>. Каждый отзыв — это шаг к лидерству в <strong>Google Maps</strong>.
+                <strong>Органические отзывы</strong> — голос клиентов. Каждый отзыв — шаг к лидерству в <strong>Google Maps</strong>.
             </div>
             <div class="block-marquee">
                 <div class="track">
-                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ ОТ РЕАЛЬНЫХ КЛИЕНТОВ 🔥 РЕЙТИНГ БУСТ С GOOGLE REVIEWS 🔥 ОРГАНИКА 🔥</span>
-                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ ОТ РЕАЛЬНЫХ КЛИЕНТОВ 🔥 РЕЙТИНГ БУСТ С GOOGLE REVIEWS 🔥 ОРГАНИКА 🔥</span>
+                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ 🔥 РЕЙТИНГ БУСТ 🔥</span>
+                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ 🔥 РЕЙТИНГ БУСТ 🔥</span>
                 </div>
             </div>
             <div class="block-wrap">
                 <div class="grid-4">
                     <div class="grid-item"><p>«RatingBoost поднял рейтинг с 3.2 до 4.8»</p><div class="author">— Алексей, ресторан</div></div>
-                    <div class="grid-item"><p>«Без ботов. Всё честно и прозрачно.»</p><div class="author">— Марина, салон</div></div>
-                    <div class="grid-item"><p>«+15 отзывов за одну неделю»</p><div class="author">— Сергей, кофейня</div></div>
+                    <div class="grid-item"><p>«Без ботов. Всё честно.»</p><div class="author">— Марина, салон</div></div>
+                    <div class="grid-item"><p>«+15 отзывов за неделю»</p><div class="author">— Сергей, кофейня</div></div>
                     <div class="grid-item"><p>«Идеальное решение для отеля»</p><div class="author">— Екатерина, отель</div></div>
                 </div>
             </div>
@@ -816,9 +820,9 @@
         <!-- ===== СТАТЬЯ ===== -->
         <section class="article-section">
             <h2>🚀 Как получить реальные отзывы Google в 2026</h2>
-            <p><span class="highlight">Google Reviews</span> — ключевой фактор локального SEO. Чем больше качественных отзывов, тем выше бизнес в выдаче <span class="highlight">Google Maps</span>.</p>
+            <p><span class="highlight">Google Reviews</span> — ключевой фактор локального SEO.</p>
             <h3>🌿 Почему органика?</h3>
-            <p>Ботов удаляют, бизнес банят. <span class="highlight">Органические отзывы</span> — единственный безопасный путь для <span class="highlight">рейтинг буст</span>.</p>
+            <p>Ботов удаляют, бизнес банят. <span class="highlight">Органические отзывы</span> — безопасный путь для <span class="highlight">рейтинг буст</span>.</p>
             <h3>🛠️ Как помогает RatingBoost</h3>
             <ul>
                 <li>🔗 Ссылка на Google-профиль</li>
@@ -826,20 +830,19 @@
                 <li>💬 Скрипты для общения</li>
                 <li>📧 Шаблоны для рассылок</li>
             </ul>
-            <p>Клиенты сами решают, ставить ли отзыв. Мы создаём условия, чтобы <span class="highlight">Google Reviews</span> появлялись естественно и работали на ваш <span class="highlight">рейтинг буст</span>.</p>
         </section>
 
         <!-- ===== ШАРИНГ ===== -->
-        <section class="share-section" id="share">
+        <section class="share-section">
             <h3>📱 Поделиться в соцсетях</h3>
             <div class="share-grid">
-                <a href="https://t.me/share/url?url=https://ratingboost.com&text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google" target="_blank" class="tg">📱 Telegram</a>
-                <a href="https://wa.me/?text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google%20https://ratingboost.com" target="_blank" class="wa">💬 WhatsApp</a>
-                <a href="viber://forward?text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google%20https://ratingboost.com" target="_blank" class="vb">📞 Viber</a>
+                <a href="https://t.me/share/url?url=https://ratingboost.com&text=RatingBoost" target="_blank" class="tg">📱 Telegram</a>
+                <a href="https://wa.me/?text=RatingBoost" target="_blank" class="wa">💬 WhatsApp</a>
+                <a href="viber://forward?text=RatingBoost" target="_blank" class="vb">📞 Viber</a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://ratingboost.com" target="_blank" class="fb">📘 Facebook</a>
                 <a href="https://vk.com/share.php?url=https://ratingboost.com" target="_blank" class="vk">📱 VK</a>
                 <a href="https://connect.ok.ru/dk?st.cmd=WidgetShare&st.shareUrl=https://ratingboost.com" target="_blank" class="ok">📙 OK</a>
-                <a href="https://twitter.com/intent/tweet?url=https://ratingboost.com&text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google" target="_blank" class="tw">🐦 Twitter</a>
+                <a href="https://twitter.com/intent/tweet?url=https://ratingboost.com&text=RatingBoost" target="_blank" class="tw">🐦 Twitter</a>
             </div>
         </section>
 
@@ -892,7 +895,7 @@
                 <a href="#">📜 Политика</a> | <a href="#">⚖️ Условия</a> | <a href="https://t.me/Local_SEO_services" target="_blank">💬 Telegram</a>
             </p>
             <p style="font-size:11px; color:#555; margin-top:4px;">
-                SEO: Google Reviews, реальные отзывы, рейтинг буст, органика, локальное SEO, Google Maps, репутация
+                SEO: Google Reviews, реальные отзывы, рейтинг буст, органика, локальное SEO, Google Maps
             </p>
         </div>
 
