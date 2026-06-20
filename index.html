@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-
-    <!-- ===== TITLE ===== -->
     <title>RatingBoost | Реальные отзывы Google для бизнеса, рейтинг буст и SEO</title>
-
-    <!-- ===== МЕТА ДЛЯ SEO ===== -->
     <meta name="description" content="Реальные отзывы Google для бизнеса. Органический рейтинг буст, SEO оптимизация, рост продаж. Без ботов и нарушений." />
     <meta name="keywords" content="реальные отзывы Google, рейтинг буст, органические отзывы, SEO для бизнеса, локальное SEO, Google Maps, RatingBoost" />
-
-    <!-- ===== ПОДТВЕРЖДЕНИЕ GOOGLE SEARCH CONSOLE ===== -->
     <meta name="google-site-verification" content="RS-c4zCmiwrQUy9uKeLJOVDVCvz3yt8pJPEGKbIgMnY" />
 
-    <!-- ===== OG-ТЕГИ ДЛЯ ПРЕВЬЮ В СОЦСЕТЯХ ===== -->
+    <!-- ===== OG-ТЕГИ ДЛЯ ПРЕВЬЮ ===== -->
     <meta property="og:title" content="RatingBoost | Реальные отзывы Google для бизнеса" />
     <meta property="og:description" content="Реальный рейтинг буст без ботов. Органические отзывы Google для роста продаж." />
     <meta property="og:image" content="https://tvoi-nick.github.io/ratingboost/ratingboost-preview.png" />
@@ -23,18 +17,15 @@
     <meta property="og:url" content="https://tvoi-nick.github.io/ratingboost/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="RatingBoost" />
-
-    <!-- ===== TWITTER ===== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RatingBoost | Реальные отзывы Google" />
     <meta name="twitter:description" content="Реальный рейтинг буст без ботов. Органические отзывы Google." />
     <meta name="twitter:image" content="https://tvoi-nick.github.io/ratingboost/ratingboost-preview.png" />
 
-    <!-- ===== FAVICON ===== -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
 
     <style>
-        /* ... твой CSS, который уже был ... */
+        /* ===== ВЕСЬ ТВОЙ CSS (который уже был) ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -367,53 +358,6 @@
             color: #ffd700;
             font-weight: 700;
         }
-        .form-section {
-            background: #1a1a1a;
-            border-radius: 12px;
-            padding: 20px 18px;
-            margin-bottom: 22px;
-            animation: fadeIn 0.8s ease;
-        }
-        .form-section p {
-            text-align: center;
-            font-size: 17px;
-            color: #ccc;
-            margin-bottom: 16px;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 10px;
-            background: #2a2a2a;
-            border: 1px solid #333;
-            border-radius: 10px;
-            color: #fff;
-            font-size: 17px;
-            font-family: inherit;
-            transition: 0.3s;
-        }
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #ffd700;
-            outline: none;
-            box-shadow: 0 0 30px rgba(255,215,0,0.05);
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 90px;
-        }
-        .success-message {
-            display: none;
-            background: #1a3a1a;
-            border: 2px solid #00cc00;
-            color: #00cc00;
-            padding: 18px;
-            border-radius: 12px;
-            text-align: center;
-            font-size: 19px;
-            font-weight: 700;
-        }
         .share-section {
             background: #1a1a1a;
             border-radius: 12px;
@@ -459,6 +403,87 @@
         .share-grid .vk { border-left: 3px solid #0077ff; }
         .share-grid .ok { border-left: 3px solid #ed812b; }
         .share-grid .tw { border-left: 3px solid #1da1f2; }
+
+        /* ===== ФОРМА (НОВАЯ) ===== */
+        .form-section {
+            background: #1a1a1a;
+            border-radius: 14px;
+            padding: 30px 25px;
+            margin: 20px 0 18px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.08);
+            animation: fadeIn 0.8s ease;
+        }
+        .form-section h2 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .form-section h2 span {
+            color: #ffd700;
+        }
+        .form-section p {
+            color: #9ca3af;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            max-width: 480px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ffd700;
+            outline: none;
+            box-shadow: 0 0 30px rgba(255,215,0,0.05);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group .btn {
+            width: 100%;
+            background: #ffd700;
+            color: #0a0a0a;
+            padding: 16px;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .form-group .btn:hover {
+            background: #fff;
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(255,215,0,0.3);
+        }
+        .success-message {
+            display: none;
+            background: #1a3a1a;
+            border: 2px solid #00cc00;
+            color: #00cc00;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 16px;
+        }
 
         /* ===== ПРЕВЬЮ-БЛОК ===== */
         .preview-block {
@@ -645,6 +670,12 @@
                 font-size: 14px;
                 padding: 10px 28px;
             }
+            .form-section {
+                padding: 20px 16px;
+            }
+            .form-section h2 {
+                font-size: 26px;
+            }
         }
         @media (max-width: 480px) {
             .preview-block .preview-title {
@@ -660,6 +691,12 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 4px;
+            }
+            .form-section h2 {
+                font-size: 22px;
+            }
+            .form-section p {
+                font-size: 15px;
             }
         }
         @media (min-width: 900px) {
@@ -846,22 +883,17 @@
             </div>
         </section>
 
-        <!-- ===== ФОРМА ===== -->
-        <section id="contact">
-            <h2 style="color:#ffd700; font-size:28px; text-align:center; margin:14px 0;">Свяжись <span style="color:#fff;">с нами</span></h2>
-            <div class="form-section">
-                <p>📝 Напиши — поможем с <strong>рейтинг буст</strong> и <strong>реальными отзывами Google</strong>.</p>
-                <div id="successMessage" class="success-message">✅ Готово! Свяжемся скоро.</div>
-                <form id="contactForm" class="form-group" action="https://formspree.io/f/xqakvwgr" method="POST">
-                    <input type="text" name="name" placeholder="👤 Имя" required />
-                    <input type="email" name="email" placeholder="📧 Почта" required />
-                    <input type="text" name="phone" placeholder="📞 Телефон" />
-                    <input type="text" name="business" placeholder="🏢 Бизнес" />
-                    <textarea name="message" placeholder="📝 Что нужно? (рейтинг буст, отзывы, SEO...)" required></textarea>
-                    <button type="submit" class="btn">🚀 Отправить</button>
-                    <a href="https://t.me/Local_SEO_services" target="_blank" class="btn-telegram" style="display:block; margin-top:6px;">💬 Telegram</a>
-                </form>
-            </div>
+        <!-- ===== ФОРМА (НОВАЯ) ===== -->
+        <section class="form-section" id="contact">
+            <h2>Связаться с <span>нами</span></h2>
+            <p>Оставь заявку, мы поможем настроить рост рейтинга.</p>
+            <form action="https://formspree.io/f/xqakvwgr" method="POST" class="form-group">
+                <input type="text" name="name" placeholder="Твое имя" required>
+                <input type="text" name="business" placeholder="Название бизнеса" required>
+                <textarea name="message" placeholder="Твой вопрос"></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+            <div class="success-message" id="successMessage">✅ Заявка отправлена! Мы свяжемся с тобой.</div>
         </section>
 
         <!-- ===== ПРЕВЬЮ-БЛОК В ПОДВАЛЕ ===== -->
@@ -889,23 +921,25 @@
         </div>
 
         <!-- ===== ПОДВАЛ ===== -->
-        <div class="footer">
-            <p>🚀 © 2026 <strong>RatingBoost</strong> — Реальные отзывы Google, рейтинг буст и SEO</p>
-            <p style="margin-top:4px;">
-                <a href="#">📜 Политика</a> | <a href="#">⚖️ Условия</a> | <a href="https://t.me/Local_SEO_services" target="_blank">💬 Telegram</a>
+        <footer class="footer">
+            <p>&copy; 2026 <strong>RatingBoost</strong>. Все права защищены.</p>
+            <p style="margin-top:4px; font-size:12px; color:#555;">
+                <a href="#">Политика</a> · <a href="#">Условия</a> · <a href="https://t.me/Local_SEO_services" target="_blank">Telegram</a>
             </p>
-            <p style="font-size:11px; color:#555; margin-top:4px;">
+            <p style="font-size:11px; color:#444; margin-top:4px;">
                 SEO: Google Reviews, реальные отзывы, рейтинг буст, органика, локальное SEO, Google Maps
             </p>
-        </div>
+        </footer>
 
     </div>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // ===== ОТПРАВКА ФОРМЫ ЧЕРЕЗ FORMPREE =====
+        document.querySelector('.form-group').addEventListener('submit', function(e) {
             e.preventDefault();
             const form = this;
             const formData = new FormData(form);
+
             fetch(form.action, {
                 method: 'POST',
                 body: formData,
@@ -917,7 +951,9 @@
                 } else {
                     alert('Ошибка. Попробуй ещё раз.');
                 }
-            }).catch(() => { alert('Ошибка.'); });
+            }).catch(() => {
+                alert('Ошибка. Попробуй ещё раз.');
+            });
         });
     </script>
 
