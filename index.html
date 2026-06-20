@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <title>RatingBoost | Реальные отзывы Google для бизнеса, рейтинг буст и SEO</title>
-    <meta name="description" content="Реальные отзывы Google для бизнеса. Органический рейтинг буст, SEO оптимизация, рост продаж. Без ботов и нарушений." />
-    <meta name="keywords" content="реальные отзывы Google, рейтинг буст, органические отзывы, SEO для бизнеса, локальное SEO, Google Maps, RatingBoost" />
+    <title>RatingBoost | Реальные отзывы Google для бизнеса</title>
+    <meta name="description" content="Реальные отзывы Google для бизнеса. Органический рейтинг буст, SEO оптимизация, рост продаж." />
+    <meta name="keywords" content="реальные отзывы Google, рейтинг буст, органические отзывы, SEO для бизнеса" />
     <meta name="google-site-verification" content="RS-c4zCmiwrQUy9uKeLJOVDVCvz3yt8pJPEGKbIgMnY" />
 
-    <!-- ===== OG-ТЕГИ ДЛЯ ПРЕВЬЮ ===== -->
+    <!-- ===== OG-ТЕГИ (общие) ===== -->
     <meta property="og:title" content="RatingBoost | Реальные отзывы Google для бизнеса" />
     <meta property="og:description" content="Реальный рейтинг буст без ботов. Органические отзывы Google для роста продаж." />
-    <meta property="og:image" content="https://tvoi-nick.github.io/ratingboost/ratingboost-preview.png" />
+    <meta property="og:image" content="https://ratingboost.vercel.app/RATINGBOOST.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://tvoi-nick.github.io/ratingboost/" />
+    <meta property="og:url" content="https://ratingboost.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="RatingBoost" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RatingBoost | Реальные отзывы Google" />
     <meta name="twitter:description" content="Реальный рейтинг буст без ботов. Органические отзывы Google." />
-    <meta name="twitter:image" content="https://tvoi-nick.github.io/ratingboost/ratingboost-preview.png" />
+    <meta name="twitter:image" content="https://ratingboost.vercel.app/RATINGBOOST.jpg" />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
 
     <style>
-        /* ===== ВЕСЬ ТВОЙ CSS (который уже был) ===== */
+        /* ===== ВЕСЬ ТВОЙ CSS (без изменений) ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -36,6 +36,9 @@
             padding: 0 8px 20px;
             font-size: 18px;
         }
+        /* ... (весь твой CSS из предыдущего кода) ... */
+        /* Я вставил его полностью, но чтобы не раздувать ответ, 
+           здесь идёт тот же CSS, что был в прошлом сообщении */
         .marquee-wrap {
             background: linear-gradient(90deg, #ffd700, #ffaa00, #ffd700);
             padding: 10px 0;
@@ -92,6 +95,38 @@
             transition: 0.3s;
         }
         nav a:hover { color: #ffd700; }
+
+        /* ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ===== */
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            background: #1a1a1a;
+            padding: 4px 8px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        .lang-switch button {
+            background: transparent;
+            color: #888;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .lang-switch button.active {
+            background: #ffd700;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+        .lang-switch button:hover:not(.active) {
+            color: #fff;
+        }
+
         .hero {
             padding: 30px 0 25px;
             text-align: center;
@@ -403,8 +438,6 @@
         .share-grid .vk { border-left: 3px solid #0077ff; }
         .share-grid .ok { border-left: 3px solid #ed812b; }
         .share-grid .tw { border-left: 3px solid #1da1f2; }
-
-        /* ===== ФОРМА (НОВАЯ) ===== */
         .form-section {
             background: #1a1a1a;
             border-radius: 14px;
@@ -484,8 +517,6 @@
             font-weight: 700;
             margin-top: 16px;
         }
-
-        /* ===== ПРЕВЬЮ-БЛОК ===== */
         .preview-block {
             background: #0a0a0a;
             border-radius: 20px;
@@ -622,7 +653,6 @@
             font-size: 15px;
             letter-spacing: 2px;
         }
-
         .footer {
             border-top: 1px solid #2a2a2a;
             padding: 20px 0 14px;
@@ -704,6 +734,21 @@
             body { padding: 0 20px; max-width: 1000px; margin: 0 auto; }
             .hero h1 { font-size: 48px; }
         }
+
+        /* ===== СКРЫТИЕ БЛОКОВ ПО ЯЗЫКУ ===== */
+        .lang-ru, .lang-en {
+            display: none;
+        }
+        .lang-ru.active, .lang-en.active {
+            display: block;
+        }
+        .lang-ru.active .grid-4, .lang-en.active .grid-4 {
+            display: grid;
+        }
+        /* Для элементов, которые должны быть видны всегда */
+        .lang-always {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -722,207 +767,397 @@
         <header>
             <div class="logo">🚀 Rating<span>Boost</span></div>
             <nav>
-                <a href="#block1">🎯 О нас</a>
-                <a href="#block2">⚡ Как</a>
-                <a href="#block3">💰 Цены</a>
-                <a href="#block4">⭐ Отзывы</a>
-                <a href="#block5">🔥 Живые</a>
-                <a href="#contact">📞 Контакты</a>
+                <!-- Меню с переключателем языка -->
+                <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                    <a href="#block1" data-lang="ru">🎯 О нас</a>
+                    <a href="#block2" data-lang="ru">⚡ Как</a>
+                    <a href="#block3" data-lang="ru">💰 Цены</a>
+                    <a href="#block4" data-lang="ru">⭐ Отзывы</a>
+                    <a href="#block5" data-lang="ru">🔥 Живые</a>
+                    <a href="#contact" data-lang="ru">📞 Контакты</a>
+                    
+                    <!-- Английское меню (скрыто по умолчанию) -->
+                    <a href="#block1" data-lang="en" style="display:none;">🎯 About</a>
+                    <a href="#block2" data-lang="en" style="display:none;">⚡ How</a>
+                    <a href="#block3" data-lang="en" style="display:none;">💰 Pricing</a>
+                    <a href="#block4" data-lang="en" style="display:none;">⭐ Reviews</a>
+                    <a href="#block5" data-lang="en" style="display:none;">🔥 Live</a>
+                    <a href="#contact" data-lang="en" style="display:none;">📞 Contact</a>
+                </div>
+                
+                <!-- Переключатель языка -->
+                <div class="lang-switch">
+                    <button class="active" onclick="switchLanguage('ru')">RU</button>
+                    <button onclick="switchLanguage('en')">EN</button>
+                </div>
             </nav>
         </header>
 
         <!-- ===== ГЕРОЙ ===== -->
         <section class="hero">
-            <h1>Реальные отзывы <br /><span>Google для всех</span></h1>
-            <p>🚀 Без ботов 🎯 Органика ⚡ Рост рейтинга</p>
+            <!-- Русская версия -->
+            <div class="lang-ru active">
+                <h1>Реальные отзывы <br /><span>Google для всех</span></h1>
+                <p>🚀 Без ботов 🎯 Органика ⚡ Рост рейтинга</p>
+            </div>
+            <!-- Английская версия -->
+            <div class="lang-en">
+                <h1>Real Reviews <br /><span>Google for Everyone</span></h1>
+                <p>🚀 No Bots 🎯 Organic ⚡ Rank Boost</p>
+            </div>
             <div class="button-group">
-                <a href="#contact" class="btn">🚀 Начать</a>
+                <a href="#contact" class="btn lang-ru active">🚀 Начать</a>
+                <a href="#contact" class="btn lang-en">🚀 Start Now</a>
                 <a href="https://t.me/Local_SEO_services" target="_blank" class="btn-telegram">💬 Telegram</a>
             </div>
         </section>
 
-        <!-- ===== БЛОК 1 ===== -->
+        <!-- ===== БЛОК 1: О НАС / ABOUT ===== -->
         <section class="block-section" id="block1">
-            <h2>Почему <span>RatingBoost</span></h2>
-            <div class="seo-description">
-                <strong>Реальные отзывы Google</strong> — фундамент бизнеса в интернете.
-                <strong>Рейтинг буст</strong> и <strong>органические отзывы</strong> помогают привлекать клиентов.
-            </div>
-            <div class="block-marquee">
-                <div class="track">
-                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИКА 🔥</span>
-                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИКА 🔥</span>
+            <!-- Русский -->
+            <div class="lang-ru active">
+                <h2>Почему <span>RatingBoost</span></h2>
+                <div class="seo-description">
+                    <strong>Реальные отзывы Google</strong> — фундамент бизнеса в интернете.
+                    <strong>Рейтинг буст</strong> и <strong>органические отзывы</strong> помогают привлекать клиентов.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИКА 🔥</span>
+                        <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИКА 🔥</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><h3>👥 Реальные люди</h3><p>Живые клиенты ставят честные отзывы.</p></div>
+                        <div class="grid-item"><h3>🌍 Для всех</h3><p>Равные возможности для любого бизнеса.</p></div>
+                        <div class="grid-item"><h3>🌿 Органика</h3><p>Без ботов и нарушений.</p></div>
+                        <div class="grid-item"><h3>📈 Рост SEO</h3><p>Выше в выдаче Google и картах.</p></div>
+                    </div>
                 </div>
             </div>
-            <div class="block-wrap">
-                <div class="grid-4">
-                    <div class="grid-item"><h3>👥 Реальные люди</h3><p>Живые клиенты ставят честные отзывы.</p></div>
-                    <div class="grid-item"><h3>🌍 Для всех</h3><p>Равные возможности для любого бизнеса.</p></div>
-                    <div class="grid-item"><h3>🌿 Органика</h3><p>Без ботов и нарушений.</p></div>
-                    <div class="grid-item"><h3>📈 Рост SEO</h3><p>Выше в выдаче Google и картах.</p></div>
+
+            <!-- Английский -->
+            <div class="lang-en">
+                <h2>Why <span>RatingBoost</span></h2>
+                <div class="seo-description">
+                    <strong>Real Google Reviews</strong> are the foundation of your online business.
+                    <strong>Rank Boost</strong> and <strong>organic reviews</strong> help attract customers.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>🔥 REAL GOOGLE REVIEWS 🔥 RANK BOOST 🔥 ORGANIC 🔥</span>
+                        <span>🔥 REAL GOOGLE REVIEWS 🔥 RANK BOOST 🔥 ORGANIC 🔥</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><h3>👥 Real People</h3><p>Real customers leave honest reviews.</p></div>
+                        <div class="grid-item"><h3>🌍 For Everyone</h3><p>Equal opportunities for any business.</p></div>
+                        <div class="grid-item"><h3>🌿 Organic</h3><p>No bots, no violations.</p></div>
+                        <div class="grid-item"><h3>📈 SEO Growth</h3><p>Higher in Google search and Maps.</p></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== БЛОК 2 ===== -->
+        <!-- ===== БЛОК 2: КАК РАБОТАЕТ / HOW IT WORKS ===== -->
         <section class="block-section" id="block2">
-            <h2>Как это <span>работает</span></h2>
-            <div class="seo-description">
-                <strong>Рейтинг буст</strong> начинается с правильной стратегии. Собирайте
-                <strong>реальные отзывы Google</strong> через ссылки, QR-коды и шаблоны.
-            </div>
-            <div class="block-marquee">
-                <div class="track">
-                    <span>⚡ СТРАТЕГИЯ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS ⚡</span>
-                    <span>⚡ СТРАТЕГИЯ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS ⚡</span>
+            <!-- Русский -->
+            <div class="lang-ru active">
+                <h2>Как это <span>работает</span></h2>
+                <div class="seo-description">
+                    <strong>Рейтинг буст</strong> начинается с правильной стратегии. Собирайте
+                    <strong>реальные отзывы Google</strong> через ссылки, QR-коды и шаблоны.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>⚡ СТРАТЕГИЯ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS ⚡</span>
+                        <span>⚡ СТРАТЕГИЯ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS ⚡</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><div class="number">1</div><h3>📝 Регистрация</h3><p>Заполни форму и получи доступ.</p></div>
+                        <div class="grid-item"><div class="number">2</div><h3>🛠️ Инструменты</h3><p>Ссылки, QR-коды и шаблоны.</p></div>
+                        <div class="grid-item"><div class="number">3</div><h3>💬 Просьба</h3><p>Клиенты ставят отзывы легко.</p></div>
+                        <div class="grid-item"><div class="number">4</div><h3>📊 Рост</h3><p>Рейтинг и доверие растут.</p></div>
+                    </div>
                 </div>
             </div>
-            <div class="block-wrap">
-                <div class="grid-4">
-                    <div class="grid-item"><div class="number">1</div><h3>📝 Регистрация</h3><p>Заполни форму и получи доступ.</p></div>
-                    <div class="grid-item"><div class="number">2</div><h3>🛠️ Инструменты</h3><p>Ссылки, QR-коды и шаблоны.</p></div>
-                    <div class="grid-item"><div class="number">3</div><h3>💬 Просьба</h3><p>Клиенты ставят отзывы легко.</p></div>
-                    <div class="grid-item"><div class="number">4</div><h3>📊 Рост</h3><p>Рейтинг и доверие растут.</p></div>
+
+            <!-- Английский -->
+            <div class="lang-en">
+                <h2>How It <span>Works</span></h2>
+                <div class="seo-description">
+                    <strong>Rank Boost</strong> starts with the right strategy. Collect
+                    <strong>real Google Reviews</strong> via links, QR codes, and templates.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>⚡ RANK BOOST STRATEGY ⚡ GOOGLE REVIEWS ⚡</span>
+                        <span>⚡ RANK BOOST STRATEGY ⚡ GOOGLE REVIEWS ⚡</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><div class="number">1</div><h3>📝 Sign Up</h3><p>Fill out the form and get access.</p></div>
+                        <div class="grid-item"><div class="number">2</div><h3>🛠️ Tools</h3><p>Links, QR codes, and templates.</p></div>
+                        <div class="grid-item"><div class="number">3</div><h3>💬 Ask</h3><p>Customers leave reviews easily.</p></div>
+                        <div class="grid-item"><div class="number">4</div><h3>📊 Growth</h3><p>Rating and trust grow.</p></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== БЛОК 3 ===== -->
+        <!-- ===== БЛОК 3: ЦЕНЫ / PRICING ===== -->
         <section class="block-section" id="block3">
-            <h2>Цены — <span>прозрачные</span></h2>
-            <div class="seo-description">
-                Тарифы для <strong>рейтинг буст</strong>. <strong>Реальные отзывы Google</strong> — доступный инструмент роста.
-            </div>
-            <div class="block-marquee">
-                <div class="track">
-                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 GOOGLE REVIEWS 💰</span>
-                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 GOOGLE REVIEWS 💰</span>
+            <!-- Русский -->
+            <div class="lang-ru active">
+                <h2>Цены — <span>прозрачные</span></h2>
+                <div class="seo-description">
+                    Тарифы для <strong>рейтинг буст</strong>. <strong>Реальные отзывы Google</strong> — доступный инструмент роста.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 GOOGLE REVIEWS 💰</span>
+                        <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 GOOGLE REVIEWS 💰</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><h3>🚀 Старт</h3><div class="cost">$19</div><ul><li>📌 10 отзывов/мес</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                        <div class="grid-item" style="border-color:#ffd700;"><h3>💼 Бизнес</h3><div class="cost">$49</div><ul><li>📌 50 отзывов/мес</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                        <div class="grid-item"><h3>🏢 Корпоративный</h3><div class="cost">$99</div><ul><li>📌 Безлимит</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                        <div class="grid-item"><h3>👑 VIP</h3><div class="cost">$199</div><ul><li>📌 Всё включено</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    </div>
                 </div>
             </div>
-            <div class="block-wrap">
-                <div class="grid-4">
-                    <div class="grid-item"><h3>🚀 Старт</h3><div class="cost">$19</div><ul><li>📌 10 отзывов/мес</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
-                    <div class="grid-item" style="border-color:#ffd700;"><h3>💼 Бизнес</h3><div class="cost">$49</div><ul><li>📌 50 отзывов/мес</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
-                    <div class="grid-item"><h3>🏢 Корпоративный</h3><div class="cost">$99</div><ul><li>📌 Безлимит</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
-                    <div class="grid-item"><h3>👑 VIP</h3><div class="cost">$199</div><ul><li>📌 Всё включено</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+
+            <!-- Английский -->
+            <div class="lang-en">
+                <h2>Pricing — <span>Transparent</span></h2>
+                <div class="seo-description">
+                    Plans for <strong>rank boost</strong>. <strong>Real Google Reviews</strong> — an affordable growth tool.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>💰 RANK BOOST PRICING 💰 GOOGLE REVIEWS 💰</span>
+                        <span>💰 RANK BOOST PRICING 💰 GOOGLE REVIEWS 💰</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><h3>🚀 Starter</h3><div class="cost">$19</div><ul><li>📌 10 reviews/month</li></ul><a href="#contact" class="btn-small">🚀 Choose</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                        <div class="grid-item" style="border-color:#ffd700;"><h3>💼 Business</h3><div class="cost">$49</div><ul><li>📌 50 reviews/month</li></ul><a href="#contact" class="btn-small">🚀 Choose</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                        <div class="grid-item"><h3>🏢 Corporate</h3><div class="cost">$99</div><ul><li>📌 Unlimited</li></ul><a href="#contact" class="btn-small">🚀 Choose</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                        <div class="grid-item"><h3>👑 VIP</h3><div class="cost">$199</div><ul><li>📌 All included</li></ul><a href="#contact" class="btn-small">🚀 Choose</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== БЛОК 4 ===== -->
+        <!-- ===== БЛОК 4: ОТЗЫВЫ / REVIEWS ===== -->
         <section class="block-section" id="block4">
-            <h2>Реальные <span>отзывы</span></h2>
-            <div class="seo-description">
-                <strong>Реальные отзывы Google</strong> от клиентов — доказательство эффективности.
-                <strong>Рейтинг буст</strong> вывел бизнесы в топ <strong>Google Maps</strong>.
-            </div>
-            <div class="block-marquee">
-                <div class="track">
-                    <span>⭐ ОТЗЫВЫ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ ⭐</span>
-                    <span>⭐ ОТЗЫВЫ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ ⭐</span>
+            <!-- Русский -->
+            <div class="lang-ru active">
+                <h2>Реальные <span>отзывы</span></h2>
+                <div class="seo-description">
+                    <strong>Реальные отзывы Google</strong> от клиентов — доказательство эффективности.
+                    <strong>Рейтинг буст</strong> вывел бизнесы в топ <strong>Google Maps</strong>.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>⭐ ОТЗЫВЫ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ ⭐</span>
+                        <span>⭐ ОТЗЫВЫ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ ⭐</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«+30% продаж за месяц!»</p><div class="author">— Михаил, кофейня</div></div>
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Реально работает для малого бизнеса.»</p><div class="author">— Ольга, студия</div></div>
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Рейтинг взлетел с 3.2 до 4.8.»</p><div class="author">— Денис, шаурма</div></div>
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Лучший способ собрать отзывы.»</p><div class="author">— Анна, салон</div></div>
+                    </div>
                 </div>
             </div>
-            <div class="block-wrap">
-                <div class="grid-4">
-                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«+30% продаж за месяц!»</p><div class="author">— Михаил, кофейня</div></div>
-                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Реально работает для малого бизнеса.»</p><div class="author">— Ольга, студия</div></div>
-                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Рейтинг взлетел с 3.2 до 4.8.»</p><div class="author">— Денис, шаурма</div></div>
-                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Лучший способ собрать отзывы.»</p><div class="author">— Анна, салон</div></div>
+
+            <!-- Английский -->
+            <div class="lang-en">
+                <h2>Real <span>Reviews</span></h2>
+                <div class="seo-description">
+                    <strong>Real Google Reviews</strong> from clients — proof of effectiveness.
+                    <strong>Rank Boost</strong> brought businesses to the top of <strong>Google Maps</strong>.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>⭐ CLIENT REVIEWS ⭐ RANK BOOST ⭐</span>
+                        <span>⭐ CLIENT REVIEWS ⭐ RANK BOOST ⭐</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«+30% sales in a month!»</p><div class="author">— Mikhail, coffee shop</div></div>
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Really works for small business.»</p><div class="author">— Olga, studio</div></div>
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Rating jumped from 3.2 to 4.8.»</p><div class="author">— Denis, shawarma</div></div>
+                        <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«The best way to collect reviews.»</p><div class="author">— Anna, salon</div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== БЛОК 5 ===== -->
+        <!-- ===== БЛОК 5: ЖИВЫЕ ОТЗЫВЫ / LIVE REVIEWS ===== -->
         <section class="block-section" id="block5">
-            <h2>🔥 Живые <span>отзывы</span></h2>
-            <div class="seo-description">
-                <strong>Органические отзывы</strong> — голос клиентов. Каждый отзыв — шаг к лидерству в <strong>Google Maps</strong>.
-            </div>
-            <div class="block-marquee">
-                <div class="track">
-                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ 🔥 РЕЙТИНГ БУСТ 🔥</span>
-                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ 🔥 РЕЙТИНГ БУСТ 🔥</span>
+            <!-- Русский -->
+            <div class="lang-ru active">
+                <h2>🔥 Живые <span>отзывы</span></h2>
+                <div class="seo-description">
+                    <strong>Органические отзывы</strong> — голос клиентов. Каждый отзыв — шаг к лидерству в <strong>Google Maps</strong>.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>🔥 ЖИВЫЕ ОТЗЫВЫ 🔥 РЕЙТИНГ БУСТ 🔥</span>
+                        <span>🔥 ЖИВЫЕ ОТЗЫВЫ 🔥 РЕЙТИНГ БУСТ 🔥</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><p>«RatingBoost поднял рейтинг с 3.2 до 4.8»</p><div class="author">— Алексей, ресторан</div></div>
+                        <div class="grid-item"><p>«Без ботов. Всё честно.»</p><div class="author">— Марина, салон</div></div>
+                        <div class="grid-item"><p>«+15 отзывов за неделю»</p><div class="author">— Сергей, кофейня</div></div>
+                        <div class="grid-item"><p>«Идеальное решение для отеля»</p><div class="author">— Екатерина, отель</div></div>
+                    </div>
                 </div>
             </div>
-            <div class="block-wrap">
-                <div class="grid-4">
-                    <div class="grid-item"><p>«RatingBoost поднял рейтинг с 3.2 до 4.8»</p><div class="author">— Алексей, ресторан</div></div>
-                    <div class="grid-item"><p>«Без ботов. Всё честно.»</p><div class="author">— Марина, салон</div></div>
-                    <div class="grid-item"><p>«+15 отзывов за неделю»</p><div class="author">— Сергей, кофейня</div></div>
-                    <div class="grid-item"><p>«Идеальное решение для отеля»</p><div class="author">— Екатерина, отель</div></div>
+
+            <!-- Английский -->
+            <div class="lang-en">
+                <h2>🔥 Live <span>Reviews</span></h2>
+                <div class="seo-description">
+                    <strong>Organic reviews</strong> — the voice of customers. Every review is a step towards leadership in <strong>Google Maps</strong>.
+                </div>
+                <div class="block-marquee">
+                    <div class="track">
+                        <span>🔥 LIVE REVIEWS 🔥 RANK BOOST 🔥</span>
+                        <span>🔥 LIVE REVIEWS 🔥 RANK BOOST 🔥</span>
+                    </div>
+                </div>
+                <div class="block-wrap">
+                    <div class="grid-4">
+                        <div class="grid-item"><p>«RatingBoost raised rating from 3.2 to 4.8»</p><div class="author">— Alex, restaurant</div></div>
+                        <div class="grid-item"><p>«No bots. Everything is honest.»</p><div class="author">— Marina, salon</div></div>
+                        <div class="grid-item"><p>«+15 reviews in one week»</p><div class="author">— Sergey, coffee shop</div></div>
+                        <div class="grid-item"><p>«Perfect solution for hotel»</p><div class="author">— Ekaterina, hotel</div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== СТАТЬЯ ===== -->
+        <!-- ===== СТАТЬЯ / ARTICLE ===== -->
         <section class="article-section">
-            <h2>🚀 Как получить реальные отзывы Google в 2026</h2>
-            <p><span class="highlight">Google Reviews</span> — ключевой фактор локального SEO.</p>
-            <h3>🌿 Почему органика?</h3>
-            <p>Ботов удаляют, бизнес банят. <span class="highlight">Органические отзывы</span> — безопасный путь для <span class="highlight">рейтинг буст</span>.</p>
-            <h3>🛠️ Как помогает RatingBoost</h3>
-            <ul>
-                <li>🔗 Ссылка на Google-профиль</li>
-                <li>📱 QR-код для чеков</li>
-                <li>💬 Скрипты для общения</li>
-                <li>📧 Шаблоны для рассылок</li>
-            </ul>
-        </section>
+            <!-- Русский -->
+            <div class="lang-ru active">
+                <h2>🚀 Как получить реальные отзывы Google в 2026</h2>
+                <p><span class="highlight">Google Reviews</span> — ключевой фактор локального SEO.</p>
+                <h3>🌿 Почему органика?</h3>
+                <p>Ботов удаляют, бизнес банят. <span class="highlight">Органические отзывы</span> — безопасный путь для <span class="highlight">рейтинг буст</span>.</p>
+                <h3>🛠️ Как помогает RatingBoost</h3>
+                <ul>
+                    <li>🔗 Ссылка на Google-профиль</li>
+                    <li>📱 QR-код для чеков</li>
+                    <li>💬 Скрипты для общения</li>
+                    <li>📧 Шаблоны для рассылок</li>
+                </ul>
+            </div>
 
-        <!-- ===== ШАРИНГ ===== -->
-        <section class="share-section">
-            <h3>📱 Поделиться в соцсетях</h3>
-            <div class="share-grid">
-                <a href="https://t.me/share/url?url=https://ratingboost.com&text=RatingBoost" target="_blank" class="tg">📱 Telegram</a>
-                <a href="https://wa.me/?text=RatingBoost" target="_blank" class="wa">💬 WhatsApp</a>
-                <a href="viber://forward?text=RatingBoost" target="_blank" class="vb">📞 Viber</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ratingboost.com" target="_blank" class="fb">📘 Facebook</a>
-                <a href="https://vk.com/share.php?url=https://ratingboost.com" target="_blank" class="vk">📱 VK</a>
-                <a href="https://connect.ok.ru/dk?st.cmd=WidgetShare&st.shareUrl=https://ratingboost.com" target="_blank" class="ok">📙 OK</a>
-                <a href="https://twitter.com/intent/tweet?url=https://ratingboost.com&text=RatingBoost" target="_blank" class="tw">🐦 Twitter</a>
+            <!-- Английский -->
+            <div class="lang-en">
+                <h2>🚀 How to Get Real Google Reviews in 2026</h2>
+                <p><span class="highlight">Google Reviews</span> are a key factor in local SEO.</p>
+                <h3>🌿 Why Organic?</h3>
+                <p>Bots are removed, businesses are banned. <span class="highlight">Organic reviews</span> are the safe path to <span class="highlight">rank boost</span>.</p>
+                <h3>🛠️ How RatingBoost Helps</h3>
+                <ul>
+                    <li>🔗 Link to Google Profile</li>
+                    <li>📱 QR code for receipts</li>
+                    <li>💬 Communication scripts</li>
+                    <li>📧 Email templates</li>
+                </ul>
             </div>
         </section>
 
-        <!-- ===== ФОРМА (НОВАЯ) ===== -->
+        <!-- ===== ШАРИНГ / SHARE ===== -->
+        <section class="share-section">
+            <h3 class="lang-ru active">📱 Поделиться в соцсетях</h3>
+            <h3 class="lang-en">📱 Share on Social Media</h3>
+            <div class="share-grid">
+                <a href="https://t.me/share/url?url=https://ratingboost.vercel.app/&text=RatingBoost%20-%20Реальные%20отзывы%20Google" target="_blank" class="tg">📱 Telegram</a>
+                <a href="https://wa.me/?text=RatingBoost%20-%20Реальные%20отзывы%20Google%20https://ratingboost.vercel.app/" target="_blank" class="wa">💬 WhatsApp</a>
+                <a href="viber://forward?text=RatingBoost%20-%20Реальные%20отзывы%20Google%20https://ratingboost.vercel.app/" target="_blank" class="vb">📞 Viber</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ratingboost.vercel.app/" target="_blank" class="fb">📘 Facebook</a>
+                <a href="https://vk.com/share.php?url=https://ratingboost.vercel.app/" target="_blank" class="vk">📱 VK</a>
+                <a href="https://connect.ok.ru/dk?st.cmd=WidgetShare&st.shareUrl=https://ratingboost.vercel.app/" target="_blank" class="ok">📙 OK</a>
+                <a href="https://twitter.com/intent/tweet?url=https://ratingboost.vercel.app/&text=RatingBoost%20-%20Реальные%20отзывы%20Google" target="_blank" class="tw">🐦 Twitter</a>
+            </div>
+        </section>
+
+        <!-- ===== ФОРМА / FORM ===== -->
         <section class="form-section" id="contact">
-            <h2>Связаться с <span>нами</span></h2>
-            <p>Оставь заявку, мы поможем настроить рост рейтинга.</p>
+            <h2 class="lang-ru active">Связаться с <span>нами</span></h2>
+            <h2 class="lang-en">Contact <span>Us</span></h2>
+            <p class="lang-ru active">Оставь заявку, мы поможем настроить рост рейтинга.</p>
+            <p class="lang-en">Leave a request, we will help set up rating growth.</p>
+            
             <form action="https://formspree.io/f/xqakvwgr" method="POST" class="form-group">
-                <input type="text" name="name" placeholder="Твое имя" required>
-                <input type="text" name="business" placeholder="Название бизнеса" required>
-                <textarea name="message" placeholder="Твой вопрос"></textarea>
-                <button type="submit" class="btn">Отправить</button>
+                <input type="text" name="name" class="lang-ru active" placeholder="Твое имя" required>
+                <input type="text" name="name" class="lang-en" placeholder="Your name" required>
+                <input type="text" name="business" class="lang-ru active" placeholder="Название бизнеса" required>
+                <input type="text" name="business" class="lang-en" placeholder="Business name" required>
+                <textarea name="message" class="lang-ru active" placeholder="Твой вопрос"></textarea>
+                <textarea name="message" class="lang-en" placeholder="Your question"></textarea>
+                <button type="submit" class="btn lang-ru active">Отправить</button>
+                <button type="submit" class="btn lang-en">Send</button>
             </form>
             <div class="success-message" id="successMessage">✅ Заявка отправлена! Мы свяжемся с тобой.</div>
         </section>
 
-        <!-- ===== ПРЕВЬЮ-БЛОК В ПОДВАЛЕ ===== -->
+        <!-- ===== ПРЕВЬЮ-БЛОК / PREVIEW BLOCK ===== -->
         <div class="preview-block">
             <div class="preview-inner">
                 <div class="preview-left">
-                    <div class="preview-badge">🏆 #1 Реальные отзывы Google</div>
+                    <div class="preview-badge lang-ru active">🏆 #1 Реальные отзывы Google</div>
+                    <div class="preview-badge lang-en">🏆 #1 Real Google Reviews</div>
                     <div class="preview-logo">🚀 Rating<span>Boost</span></div>
-                    <div class="preview-title">
+                    <div class="preview-title lang-ru active">
                         Реальные отзывы <br /><span class="gold">Google для всех</span>
                     </div>
-                    <div class="preview-sub">
+                    <div class="preview-title lang-en">
+                        Real Reviews <br /><span class="gold">Google for Everyone</span>
+                    </div>
+                    <div class="preview-sub lang-ru active">
                         Без ботов · Органика · Рост рейтинга
                     </div>
-                    <a href="#contact" class="preview-btn">🚀 Начать сейчас</a>
+                    <div class="preview-sub lang-en">
+                        No Bots · Organic · Rank Boost
+                    </div>
+                    <a href="#contact" class="preview-btn lang-ru active">🚀 Начать сейчас</a>
+                    <a href="#contact" class="preview-btn lang-en">🚀 Start Now</a>
                 </div>
                 <div class="preview-right">
                     ⭐⭐⭐⭐⭐
                 </div>
             </div>
             <div class="preview-footer">
-                <span>📍 RatingBoost · Реальные отзывы Google</span>
+                <span class="lang-ru active">📍 RatingBoost · Реальные отзывы Google</span>
+                <span class="lang-en">📍 RatingBoost · Real Google Reviews</span>
                 <span class="stars">⭐ 4.9 ★ 847+ бизнесов</span>
             </div>
         </div>
 
-        <!-- ===== ПОДВАЛ ===== -->
+        <!-- ===== ПОДВАЛ / FOOTER ===== -->
         <footer class="footer">
-            <p>&copy; 2026 <strong>RatingBoost</strong>. Все права защищены.</p>
+            <p class="lang-ru active">&copy; 2026 <strong>RatingBoost</strong>. Все права защищены.</p>
+            <p class="lang-en">&copy; 2026 <strong>RatingBoost</strong>. All rights reserved.</p>
             <p style="margin-top:4px; font-size:12px; color:#555;">
                 <a href="#">Политика</a> · <a href="#">Условия</a> · <a href="https://t.me/Local_SEO_services" target="_blank">Telegram</a>
             </p>
@@ -934,7 +1169,60 @@
     </div>
 
     <script>
-        // ===== ОТПРАВКА ФОРМЫ ЧЕРЕЗ FORMPREE =====
+        // ===== ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА =====
+        function switchLanguage(lang) {
+            // Переключаем активный класс у кнопок
+            document.querySelectorAll('.lang-switch button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-switch button[onclick="switchLanguage('${lang}')"]`).classList.add('active');
+
+            // Показываем/скрываем блоки
+            document.querySelectorAll('.lang-ru').forEach(el => {
+                el.classList.toggle('active', lang === 'ru');
+            });
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('active', lang === 'en');
+            });
+
+            // Меняем меню (ссылки с data-lang)
+            document.querySelectorAll('nav a[data-lang="ru"]').forEach(el => {
+                el.style.display = lang === 'ru' ? 'inline' : 'none';
+            });
+            document.querySelectorAll('nav a[data-lang="en"]').forEach(el => {
+                el.style.display = lang === 'en' ? 'inline' : 'none';
+            });
+
+            // Обновляем placeholder в форме
+            document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => {
+                if (el.classList.contains('lang-ru')) {
+                    el.style.display = lang === 'ru' ? 'block' : 'none';
+                }
+                if (el.classList.contains('lang-en')) {
+                    el.style.display = lang === 'en' ? 'block' : 'none';
+                }
+            });
+            document.querySelectorAll('.form-group .btn').forEach(el => {
+                if (el.classList.contains('lang-ru')) {
+                    el.style.display = lang === 'ru' ? 'block' : 'none';
+                }
+                if (el.classList.contains('lang-en')) {
+                    el.style.display = lang === 'en' ? 'block' : 'none';
+                }
+            });
+
+            // Обновляем lang атрибут у html
+            document.documentElement.lang = lang;
+
+            // Сохраняем выбор в localStorage
+            localStorage.setItem('lang', lang);
+        }
+
+        // ===== ВОССТАНОВЛЕНИЕ ЯЗЫКА =====
+        const savedLang = localStorage.getItem('lang') || 'ru';
+        switchLanguage(savedLang);
+
+        // ===== ОТПРАВКА ФОРМЫ =====
         document.querySelector('.form-group').addEventListener('submit', function(e) {
             e.preventDefault();
             const form = this;
