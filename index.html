@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>RatingBoost | Реальные отзывы Google для бизнеса, рейтинг буст и SEO</title>
+    <meta name="description" content="Реальные отзывы Google для бизнеса. Органический рейтинг буст, SEO оптимизация, рост продаж. Без ботов и нарушений." />
+    <meta name="keywords" content="реальные отзывы Google, рейтинг буст, органические отзывы, SEO для бизнеса, локальное SEO, Google Maps, RatingBoost, накрутка отзывов, репутация" />
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #f0f0f0;
+            width: 100%;
+            padding: 0 8px 20px;
+            font-size: 18px;
+        }
+
+        .marquee-wrap {
+            background: linear-gradient(90deg, #ffd700, #ffaa00, #ffd700);
+            padding: 10px 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .marquee-wrap .track {
+            display: flex;
+            white-space: nowrap;
+            animation: scrollMarquee 25s linear infinite;
+            width: max-content;
+        }
+        .marquee-wrap .track span {
+            display: inline-block;
+            padding: 0 30px;
+            font-size: 18px;
+            font-weight: 900;
+            color: #0a0a0a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0 12px;
+            border-bottom: 3px solid #ffd700;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: #ffd700;
+            text-transform: uppercase;
+        }
+        .logo span { color: #fff; }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+        }
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #ffd700; }
+
+        .hero {
+            padding: 30px 0 25px;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        .hero h1 span { color: #ffd700; }
+        .hero p {
+            font-size: 20px;
+            color: #bbb;
+            margin: 12px auto 18px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #0a0a0a;
+            padding: 14px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        .btn:hover { background: #fff; transform: scale(1.02); box-shadow: 0 0 30px rgba(255,215,0,0.3); }
+        .btn-telegram {
+            display: inline-block;
+            background: #0088cc;
+            color: #fff;
+            padding: 14px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-telegram:hover { background: #00aaff; transform: scale(1.02); box-shadow: 0 0 30px rgba(0,136,204,0.3); }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 340px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* ===== БЛОК С ОПИСАНИЕМ ===== */
+        .block-section {
+            margin: 28px 0 14px;
+            animation: fadeIn 0.8s ease;
+        }
+        .block-section h2 {
+            color: #ffd700;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .block-section h2 span { color: #fff; }
+
+        /* SEO-описание над блоком */
+        .seo-description {
+            background: rgba(255,215,0,0.05);
+            border-left: 4px solid #ffd700;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #bbb;
+            line-height: 1.6;
+        }
+        .seo-description strong {
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        /* Бегущая строка внутри блока */
+        .block-marquee {
+            background: rgba(255,215,0,0.08);
+            padding: 8px 0;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,215,0,0.1);
+        }
+        .block-marquee .track {
+            display: flex;
+            white-space: nowrap;
+            animation: scrollMarquee 20s linear infinite;
+            width: max-content;
+        }
+        .block-marquee .track span {
+            display: inline-block;
+            padding: 0 40px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .block-wrap {
+            background: #121212;
+            border-radius: 14px;
+            padding: 16px 14px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .grid-item {
+            background: #1a1a1a;
+            padding: 18px 16px;
+            border-radius: 12px;
+            border-left: 4px solid #ffd700;
+            transition: all 0.4s ease;
+            animation: slideUp 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .grid-item:nth-child(1) { animation-delay: 0.1s; }
+        .grid-item:nth-child(2) { animation-delay: 0.2s; }
+        .grid-item:nth-child(3) { animation-delay: 0.3s; }
+        .grid-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .grid-item:hover {
+            background: #282828;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(255,215,0,0.15);
+            border-left-color: #fff;
+        }
+        .grid-item h3 {
+            color: #ffd700;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        .grid-item p {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .grid-item .number {
+            display: inline-block;
+            background: #ffd700;
+            color: #0a0a0a;
+            font-size: 20px;
+            font-weight: 900;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+        .grid-item:hover .number {
+            transform: scale(1.1) rotate(10deg);
+            background: #fff;
+        }
+        .grid-item .cost {
+            font-size: 32px;
+            font-weight: 900;
+            color: #ffd700;
+        }
+        .grid-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0;
+        }
+        .grid-item ul li {
+            color: #ccc;
+            font-size: 15px;
+            padding: 4px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .grid-item ul li:last-child { border-bottom: none; }
+        .grid-item .stars {
+            color: #ffd700;
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+        .grid-item .author {
+            color: #888;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .grid-item .btn-small {
+            display: block;
+            background: #ffd700;
+            color: #0a0a0a;
+            padding: 10px 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            margin-top: 6px;
+        }
+        .grid-item .btn-small:hover { background: #fff; transform: scale(1.04); }
+        .grid-item .btn-small-telegram {
+            display: block;
+            background: #0088cc;
+            color: #fff;
+            padding: 10px 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            margin-top: 4px;
+        }
+        .grid-item .btn-small-telegram:hover { background: #00aaff; transform: scale(1.04); }
+
+        .article-section {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px 18px;
+            margin: 20px 0 22px;
+            border-left: 4px solid #ffd700;
+            animation: fadeIn 0.8s ease;
+        }
+        .article-section h2 {
+            color: #ffd700;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .article-section h3 {
+            color: #fff;
+            font-size: 18px;
+            margin: 12px 0 6px;
+        }
+        .article-section p {
+            color: #ccc;
+            font-size: 17px;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+        .article-section ul {
+            padding-left: 20px;
+            margin: 8px 0 12px;
+        }
+        .article-section ul li {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .article-section .highlight {
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        .form-section {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px 18px;
+            margin-bottom: 22px;
+            animation: fadeIn 0.8s ease;
+        }
+        .form-section p {
+            text-align: center;
+            font-size: 17px;
+            color: #ccc;
+            margin-bottom: 16px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 10px;
+            background: #2a2a2a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 17px;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ffd700;
+            outline: none;
+            box-shadow: 0 0 30px rgba(255,215,0,0.05);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .success-message {
+            display: none;
+            background: #1a3a1a;
+            border: 2px solid #00cc00;
+            color: #00cc00;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .share-section {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px 18px;
+            margin: 16px 0 22px;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+        .share-section h3 {
+            color: #ffd700;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+        .share-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        .share-grid a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: #222;
+            color: #fff;
+            padding: 12px 6px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .share-grid a:hover {
+            background: #3a3a3a;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255,215,0,0.1);
+        }
+        .share-grid .tg { border-left: 3px solid #0088cc; }
+        .share-grid .wa { border-left: 3px solid #25d366; }
+        .share-grid .vb { border-left: 3px solid #7b519d; }
+        .share-grid .fb { border-left: 3px solid #1877f2; }
+        .share-grid .vk { border-left: 3px solid #0077ff; }
+        .share-grid .ok { border-left: 3px solid #ed812b; }
+        .share-grid .tw { border-left: 3px solid #1da1f2; }
+
+        .footer {
+            border-top: 1px solid #2a2a2a;
+            padding: 20px 0 14px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .footer a:hover { text-decoration: underline; }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.96); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (min-width: 600px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 40px; }
+        }
+        @media (min-width: 900px) {
+            .grid-4 { grid-template-columns: repeat(4, 1fr); }
+            body { padding: 0 20px; max-width: 1000px; margin: 0 auto; }
+            .hero h1 { font-size: 48px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== БЕГУЩАЯ СТРОКА ГЛАВНАЯ ===== -->
+    <div class="marquee-wrap">
+        <div class="track">
+            <span>🚀 REAL GOOGLE REVIEWS 🎯 ORGANIC ⚡ NO BOTS 🔥 SEO 💰 RATINGBOOST</span>
+            <span>🚀 REAL GOOGLE REVIEWS 🎯 ORGANIC ⚡ NO BOTS 🔥 SEO 💰 RATINGBOOST</span>
+        </div>
+    </div>
+
+    <div style="max-width:100%; padding:0;">
+
+        <!-- ===== ШАПКА ===== -->
+        <header>
+            <div class="logo">🚀 Rating<span>Boost</span></div>
+            <nav>
+                <a href="#block1">🎯 О нас</a>
+                <a href="#block2">⚡ Как</a>
+                <a href="#block3">💰 Цены</a>
+                <a href="#block4">⭐ Отзывы</a>
+                <a href="#block5">🔥 Живые</a>
+                <a href="#contact">📞 Контакты</a>
+            </nav>
+        </header>
+
+        <!-- ===== ГЕРОЙ ===== -->
+        <section class="hero">
+            <h1>Реальные отзывы <br /><span>Google для всех</span></h1>
+            <p>🚀 Без ботов 🎯 Органика ⚡ Рост рейтинга</p>
+            <div class="button-group">
+                <a href="#contact" class="btn">🚀 Начать</a>
+                <a href="https://t.me/Local_SEO_services" target="_blank" class="btn-telegram">💬 Telegram</a>
+            </div>
+        </section>
+
+        <!-- ===== БЛОК 1: О НАС ===== -->
+        <section class="block-section" id="block1">
+            <h2>Почему <span>RatingBoost</span></h2>
+
+            <!-- SEO-описание -->
+            <div class="seo-description">
+                <strong>Реальные отзывы Google</strong> — это фундамент вашего бизнеса в интернете. 
+                <strong>Рейтинг буст</strong> и <strong>органические отзывы</strong> помогают привлекать клиентов 
+                и укреплять <strong>репутацию</strong>. Узнайте, как <strong>Google Reviews</strong> влияют на 
+                <strong>локальное SEO</strong> и видимость в <strong>Google Maps</strong>.
+            </div>
+
+            <!-- Бегущая строка внутри блока -->
+            <div class="block-marquee">
+                <div class="track">
+                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ДЛЯ БИЗНЕСА 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИЧЕСКИЙ РОСТ 🔥 ЛОКАЛЬНОЕ SEO 🔥 GOOGLE MAPS 🔥</span>
+                    <span>🔥 РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ДЛЯ БИЗНЕСА 🔥 РЕЙТИНГ БУСТ 🔥 ОРГАНИЧЕСКИЙ РОСТ 🔥 ЛОКАЛЬНОЕ SEO 🔥 GOOGLE MAPS 🔥</span>
+                </div>
+            </div>
+
+            <div class="block-wrap">
+                <div class="grid-4">
+                    <div class="grid-item"><h3>👥 Реальные люди</h3><p>Живые клиенты ставят честные отзывы.</p></div>
+                    <div class="grid-item"><h3>🌍 Для всех</h3><p>Равные возможности для любого бизнеса.</p></div>
+                    <div class="grid-item"><h3>🌿 Органика</h3><p>Без ботов, без нарушений правил.</p></div>
+                    <div class="grid-item"><h3>📈 Рост SEO</h3><p>Выше в выдаче Google и картах.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== БЛОК 2: КАК РАБОТАЕТ ===== -->
+        <section class="block-section" id="block2">
+            <h2>Как это <span>работает</span></h2>
+
+            <div class="seo-description">
+                <strong>Рейтинг буст</strong> начинается с правильной стратегии. Мы помогаем собирать 
+                <strong>реальные отзывы Google</strong> через простые инструменты: ссылки, QR-коды и шаблоны. 
+                Это улучшает <strong>локальное SEO</strong>, повышает доверие и выводит бизнес в 
+                <strong>Google Maps</strong> топ.
+            </div>
+
+            <div class="block-marquee">
+                <div class="track">
+                    <span>⚡ КАК РАБОТАЕТ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS СТРАТЕГИЯ ⚡ ОРГАНИЧЕСКИЕ ОТЗЫВЫ ⚡ ЛОКАЛЬНОЕ SEO ⚡</span>
+                    <span>⚡ КАК РАБОТАЕТ РЕЙТИНГ БУСТ ⚡ GOOGLE REVIEWS СТРАТЕГИЯ ⚡ ОРГАНИЧЕСКИЕ ОТЗЫВЫ ⚡ ЛОКАЛЬНОЕ SEO ⚡</span>
+                </div>
+            </div>
+
+            <div class="block-wrap">
+                <div class="grid-4">
+                    <div class="grid-item"><div class="number">1</div><h3>📝 Регистрация</h3><p>Заполни форму и получи доступ.</p></div>
+                    <div class="grid-item"><div class="number">2</div><h3>🛠️ Инструменты</h3><p>Ссылки, QR-коды и шаблоны.</p></div>
+                    <div class="grid-item"><div class="number">3</div><h3>💬 Просьба</h3><p>Клиенты ставят отзывы легко.</p></div>
+                    <div class="grid-item"><div class="number">4</div><h3>📊 Рост</h3><p>Рейтинг и доверие растут.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== БЛОК 3: ЦЕНЫ ===== -->
+        <section class="block-section" id="block3">
+            <h2>Цены — <span>прозрачные</span></h2>
+
+            <div class="seo-description">
+                Выберите тариф для <strong>рейтинг буст</strong> вашего бизнеса. 
+                <strong>Реальные отзывы Google</strong> — это доступный инструмент для роста продаж. 
+                Мы предлагаем гибкие цены для любого бюджета, от старта до VIP-пакета с полным 
+                <strong>SEO для бизнеса</strong>.
+            </div>
+
+            <div class="block-marquee">
+                <div class="track">
+                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 СТОИМОСТЬ GOOGLE REVIEWS 💰 ОРГАНИЧЕСКИЕ ОТЗЫВЫ НЕДОРОГО 💰</span>
+                    <span>💰 ЦЕНЫ НА РЕЙТИНГ БУСТ 💰 СТОИМОСТЬ GOOGLE REVIEWS 💰 ОРГАНИЧЕСКИЕ ОТЗЫВЫ НЕДОРОГО 💰</span>
+                </div>
+            </div>
+
+            <div class="block-wrap">
+                <div class="grid-4">
+                    <div class="grid-item"><h3>🚀 Старт</h3><div class="cost">$19</div><ul><li>📌 10 отзывов/мес</li><li>🔧 Инструменты</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item" style="border-color:#ffd700;"><h3>💼 Бизнес</h3><div class="cost">$49</div><ul><li>📌 50 отзывов/мес</li><li>👨‍💼 Менеджер</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item"><h3>🏢 Корпоративный</h3><div class="cost">$99</div><ul><li>📌 Безлимит</li><li>📊 Аналитика</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                    <div class="grid-item"><h3>👑 VIP</h3><div class="cost">$199</div><ul><li>📌 Всё включено</li><li>⚡ Приоритет</li></ul><a href="#contact" class="btn-small">🚀 Выбрать</a><a href="https://t.me/Local_SEO_services" target="_blank" class="btn-small-telegram">💬 Telegram</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== БЛОК 4: ОТЗЫВЫ ===== -->
+        <section class="block-section" id="block4">
+            <h2>Реальные <span>отзывы</span></h2>
+
+            <div class="seo-description">
+                <strong>Реальные отзывы Google</strong> от наших клиентов — лучшее доказательство эффективности. 
+                <strong>Рейтинг буст</strong> помог многим бизнесам выйти в топ <strong>Google Maps</strong> и увеличить 
+                продажи. Читайте истории успеха и вдохновляйтесь!
+            </div>
+
+            <div class="block-marquee">
+                <div class="track">
+                    <span>⭐ РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ОТ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ В ДЕЙСТВИИ ⭐ ГОРЯЧИЕ ОТЗЫВЫ ⭐</span>
+                    <span>⭐ РЕАЛЬНЫЕ ОТЗЫВЫ GOOGLE ОТ КЛИЕНТОВ ⭐ РЕЙТИНГ БУСТ В ДЕЙСТВИИ ⭐ ГОРЯЧИЕ ОТЗЫВЫ ⭐</span>
+                </div>
+            </div>
+
+            <div class="block-wrap">
+                <div class="grid-4">
+                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«+30% продаж за месяц!»</p><div class="author">— Михаил, кофейня</div></div>
+                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Реально работает для малого бизнеса.»</p><div class="author">— Ольга, студия</div></div>
+                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Рейтинг взлетел с 3.2 до 4.8.»</p><div class="author">— Денис, шаурма</div></div>
+                    <div class="grid-item"><div class="stars">⭐⭐⭐⭐⭐</div><p>«Лучший способ собрать отзывы.»</p><div class="author">— Анна, салон</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== БЛОК 5: ЖИВЫЕ ОТЗЫВЫ ===== -->
+        <section class="block-section" id="block5">
+            <h2>🔥 Живые <span>отзывы</span></h2>
+
+            <div class="seo-description">
+                <strong>Органические отзывы</strong> — это голос ваших клиентов. Мы помогаем собирать 
+                <strong>реальные отзывы Google</strong>, которые работают на ваш <strong>рейтинг буст</strong> 
+                и <strong>локальное SEO</strong>. Каждый отзыв — это шаг к лидерству в <strong>Google Maps</strong>.
+            </div>
+
+            <div class="block-marquee">
+                <div class="track">
+                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ ОТ РЕАЛЬНЫХ КЛИЕНТОВ 🔥 РЕЙТИНГ БУСТ С GOOGLE REVIEWS 🔥 ОРГАНИКА 🔥</span>
+                    <span>🔥 ЖИВЫЕ ОТЗЫВЫ ОТ РЕАЛЬНЫХ КЛИЕНТОВ 🔥 РЕЙТИНГ БУСТ С GOOGLE REVIEWS 🔥 ОРГАНИКА 🔥</span>
+                </div>
+            </div>
+
+            <div class="block-wrap">
+                <div class="grid-4">
+                    <div class="grid-item"><p>«RatingBoost поднял рейтинг с 3.2 до 4.8»</p><div class="author">— Алексей, ресторан</div></div>
+                    <div class="grid-item"><p>«Без ботов. Всё честно и прозрачно.»</p><div class="author">— Марина, салон</div></div>
+                    <div class="grid-item"><p>«+15 отзывов за одну неделю»</p><div class="author">— Сергей, кофейня</div></div>
+                    <div class="grid-item"><p>«Идеальное решение для отеля»</p><div class="author">— Екатерина, отель</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== БОЛЬШАЯ СТАТЬЯ С SEO ===== -->
+        <section class="article-section">
+            <h2>🚀 Как получить реальные отзывы Google в 2026</h2>
+            <p><span class="highlight">Google Reviews</span> — ключевой фактор локального SEO. Чем больше качественных отзывов, тем выше бизнес в выдаче <span class="highlight">Google Maps</span>.</p>
+            <h3>🌿 Почему органика?</h3>
+            <p>Ботов удаляют, бизнес банят. <span class="highlight">Органические отзывы</span> — единственный безопасный путь для <span class="highlight">рейтинг буст</span>.</p>
+            <h3>🛠️ Как помогает RatingBoost</h3>
+            <ul>
+                <li>🔗 Ссылка на Google-профиль</li>
+                <li>📱 QR-код для чеков</li>
+                <li>💬 Скрипты для общения</li>
+                <li>📧 Шаблоны для рассылок</li>
+            </ul>
+            <p>Клиенты сами решают, ставить ли отзыв. Мы создаём условия, чтобы <span class="highlight">Google Reviews</span> появлялись естественно и работали на ваш <span class="highlight">рейтинг буст</span>.</p>
+        </section>
+
+        <!-- ===== КНОПКИ ПОДЕЛИТЬСЯ ===== -->
+        <section class="share-section" id="share">
+            <h3>📱 Поделиться в соцсетях</h3>
+            <div class="share-grid">
+                <a href="https://t.me/share/url?url=https://ratingboost.com&text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google" target="_blank" class="tg">📱 Telegram</a>
+                <a href="https://wa.me/?text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google%20https://ratingboost.com" target="_blank" class="wa">💬 WhatsApp</a>
+                <a href="viber://forward?text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google%20https://ratingboost.com" target="_blank" class="vb">📞 Viber</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ratingboost.com" target="_blank" class="fb">📘 Facebook</a>
+                <a href="https://vk.com/share.php?url=https://ratingboost.com" target="_blank" class="vk">📱 VK</a>
+                <a href="https://connect.ok.ru/dk?st.cmd=WidgetShare&st.shareUrl=https://ratingboost.com" target="_blank" class="ok">📙 OK</a>
+                <a href="https://twitter.com/intent/tweet?url=https://ratingboost.com&text=RatingBoost%20-%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%20Google" target="_blank" class="tw">🐦 Twitter</a>
+            </div>
+        </section>
+
+        <!-- ===== ФОРМА ===== -->
+        <section id="contact">
+            <h2 style="color:#ffd700; font-size:28px; text-align:center; margin:14px 0;">Свяжись <span style="color:#fff;">с нами</span></h2>
+            <div class="form-section">
+                <p>📝 Напиши — поможем с <strong>рейтинг буст</strong> и <strong>реальными отзывами Google</strong>.</p>
+                <div id="successMessage" class="success-message">✅ Готово! Свяжемся скоро.</div>
+                <form id="contactForm" class="form-group" action="https://formspree.io/f/xqakvwgr" method="POST">
+                    <input type="text" name="name" placeholder="👤 Имя" required />
+                    <input type="email" name="email" placeholder="📧 Почта" required />
+                    <input type="text" name="phone" placeholder="📞 Телефон" />
+                    <input type="text" name="business" placeholder="🏢 Бизнес" />
+                    <textarea name="message" placeholder="📝 Что нужно? (рейтинг буст, отзывы, SEO...)" required></textarea>
+                    <button type="submit" class="btn">🚀 Отправить</button>
+                    <a href="https://t.me/Local_SEO_services" target="_blank" class="btn-telegram" style="display:block; margin-top:6px;">💬 Telegram</a>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== ПОДВАЛ ===== -->
+        <div class="footer">
+            <p>🚀 © 2026 <strong>RatingBoost</strong> — Реальные отзывы Google, рейтинг буст и SEO</p>
+            <p style="margin-top:4px;">
+                <a href="#">📜 Политика</a> | <a href="#">⚖️ Условия</a> | <a href="https://t.me/Local_SEO_services" target="_blank">💬 Telegram</a>
+            </p>
+            <p style="font-size:11px; color:#555; margin-top:4px;">
+                SEO: Google Reviews, реальные отзывы, рейтинг буст, органика, локальное SEO, Google Maps, репутация
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                } else {
+                    alert('Ошибка. Попробуй ещё раз.');
+                }
+            }).catch(() => { alert('Ошибка.'); });
+        });
+    </script>
+
+</body>
+</html>
